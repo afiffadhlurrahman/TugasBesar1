@@ -44,27 +44,30 @@ def Help():
     if kembali:
         print()
         Show_menu()
+# Baju
+terbeli1 = 0
+rate1 = 0 
+jumlah1 = 0
+stok1 = 99
 
 def Baju():
-    beli1 = 0
-    rate1 = 0 
-    jumlah1 = 0
-    stok1 = 99
+    global terbeli1, rate1, jumlah1, stok1
     print("Baju")
     print("Harga: Rp250000")
     print("Stok barang: " + str(stok1))
-    print("Barang yang sudah terbeli: " + str(beli1))
+    print("Barang yang sudah terbeli: " + str(terbeli1))
     print("Rating: " + str(rate1) + " dari " + str(jumlah1) + " pengguna")
     beli1 = int(input("Banyaknya baju yang ingin dibeli: "))
     total_harga = beli1 * 250000
     print("Total harga: Rp" + str(total_harga))
     rate1 += int(input("Masukkan rating: "))
     jumlah1 += 1
+    rata1 = rate1 / jumlah1
     stok1 = stok1 - beli1
-    beli1 += beli1
-    print("Rating: " + str(rate1) + " dari " + str(jumlah1) + " pengguna")
+    terbeli1 += beli1
+    print("Rating: " + str(rata1) + " dari " + str(jumlah1) + " pengguna")
     print("Stok: " + str(stok1))
-    print("Barang yang sudah terbeli: " + str(beli1))
+    print("Barang yang sudah terbeli: " + str(terbeli1))
     print("Terima kasih sudah berbelanja dengan kami")
     print()
     kembali = input("Silahkan mengisi '0' untuk kembali ke menu: ")
@@ -73,12 +76,15 @@ def Baju():
         kembali = input("Silahkan mengisi '0' untuk kembali ke menu: ")
     if kembali:
         Show_menu()
-    
+
+# Celana
+beli2 = 0
+rate2 = 0 
+jumlah2 = 0
+stok2 = 99
+
 def Celana():
-    beli2 = 0
-    rate2 = 0 
-    jumlah2 = 0
-    stok2 = 99
+    global beli2, rate2, jumlah2, stok2
     print("Celana")
     print("Harga: Rp250000")
     print("Stok barang: " + str(stok2))
